@@ -1,6 +1,6 @@
 /*
 Name:       CanvasReflection
-Version:    0.0.1 (24. October 2010)
+Version:    0.0.2 (24. October 2010)
 Author:     Finn Rudolph
 Support:    finn.rudolph@googlemail.com
 
@@ -44,7 +44,7 @@ function CanvasReflection()
 			width: image.width,
 			height: image.height,
 			reflectionPercent: 50,
-			reflectionOpacity: 0.5,
+			reflectionOpacity: 0.2,
 			counter: 200 
 		};
 

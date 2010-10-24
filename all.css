@@ -24,7 +24,7 @@
 	}
 	body{
 		text-align:center;
-		
+		overflow:hidden;
 	}
 	canvas{
 		margin:10px;
@@ -37,16 +37,38 @@
 		text-decoration:none;
 		color:#0063DC;
 	}
+	a:hover{
+		color:#000;
+	}
+	b{
+		font-weight:bold;
+		color:#666;
+	}
 	p{
-		line-height:30px;
+		line-height:20px;
+		padding:5px 0;
 		background:#fff;
 		width:100%;
+		box-shadow: 2px 0px 15px #ccc;
+		-moz-box-shadow: 0px 2px 12px #ccc;
+		-webkit-box-shadow: 0px 0px 15px #ccc;
+		margin-bottom:20px;
 	}
 	#bottom{
 		line-height:30px;
 		height:30px;
 		position:absolute;
-		bottom:0;
+		bottom:-20px;
 		left:0;
 	}
-}                                    
+	.headline{
+		font-size:30px;
+		line-height:40px;
+		font-weight:bold;color:#000;
+		margin:0 10px 0 -10px;
+	}
+	.headline:hover{
+		background:#000;
+		color:#fff;
+	}
+}
