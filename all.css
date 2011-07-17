@@ -54,6 +54,14 @@
 		-webkit-box-shadow: 0px 0px 15px #ccc;
 		margin-bottom:20px;
 	}
+	#stats{
+		position:absolute;
+		top:0;
+		left:0;
+	}
+	#stats canvas{
+		margin:0;
+	}
 	#bottom{
 		line-height:30px;
 		height:30px;

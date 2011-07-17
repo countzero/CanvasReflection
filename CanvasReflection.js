@@ -63,14 +63,16 @@ function CanvasReflection()
 		/* Render the canvas element */
 		my.reflect(my.options.canvas, my.options.context, my.options.image, width, height, reflectionHeight, my.options.reflectionOpacity);
 		
-		/* Decrease the counter */
-		my.options.counter -= 1;
-		
-		/* Interrupt the interval after options.counter rounds */
-		if(my.options.counter < 0)
+		/* Increase/decrease the counter */
+		if(my.options.counter === 0)
 		{
-			window.clearInterval(my.animationInterval);
+			direction = -1;
 		}
+		if(my.options.counter === 200)
+		{
+			direction = 1;
+		}
+		my.options.counter -= 1 * direction;
 	};
 
 	/* Reflect the image */
@@ -107,6 +109,12 @@ function CanvasReflection()
 /* Create global instance when the DOM structure has been loaded */
 domReady(function()
 {
+	/* Start the stats tool */
+	var stats = new Stats();
+	document.body.appendChild( stats.domElement );
+	stats.domElement.id = 'stats';
+	setInterval(function () { stats.update(); }, 1000/60);
+
 	/* Reflect all images in the DOM */
 	var images = document.getElementsByTagName('IMG'),
 		max = images.length, 
