@@ -34,6 +34,10 @@ function CanvasReflection()
 		/* Create canvas element */
 		var canvas = document.createElement('canvas');
 		document.body.appendChild(canvas);
+		
+		/* The Internet Explorer can only get the image size from the img attributes */
+		var width = (image.getAttribute('width') !== null) ? image.getAttribute('width') : image.width;
+		var height = (image.getAttribute('height') !== null) ? image.getAttribute('height') : image.height;
 
 		/* Set options */
 		this.options = 
@@ -41,8 +45,8 @@ function CanvasReflection()
 			canvas: canvas,
 			context: canvas.getContext('2d'),
 			image: image,
-			width: image.width,
-			height: image.height,
+			width: width,
+			height: height,
 			reflectionPercent: 50,
 			reflectionOpacity: 0.2,
 			counter: 200 
