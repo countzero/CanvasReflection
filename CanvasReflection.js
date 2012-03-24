@@ -1,6 +1,6 @@
 /*
 Name:       CanvasReflection
-Version:    0.0.2 (24. October 2010)
+Version:    0.0.3 (25. März 2012)
 Author:     Finn Rudolph
 Support:    finn.rudolph@googlemail.com
 
@@ -85,6 +85,9 @@ function CanvasReflection()
 		/* Set canvas dimensions */
 		canvas.height = height + reflectionHeight;
 		canvas.width = width;
+		
+		/* Reset the current path (performance relevant for the IE) */
+		context.beginPath(); 
 
 		/* Draw flipped source image */
 		context.save();
